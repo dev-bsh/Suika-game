@@ -1,5 +1,6 @@
 import { Bodies, Body, Engine, Events, Render, Runner, World } from "matter-js";
 import { FRUITS } from "./fruits";
+import "./style.css";
 
 const engine = Engine.create();
 
@@ -134,7 +135,7 @@ window.onkeydown = (event) => {
   }
 }
 
-// 충돌 이벤트 (과일 충돌, topLine 충돌)
+// 충돌 이벤트 (과일, topLine 충돌)
 Events.on(engine, "collisionStart", (event) => {
   event.pairs.forEach((collision) => {
     const index = collision.bodyA.index;
